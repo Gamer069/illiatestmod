@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "id": "illiatestmod",
+  "version": "${version}",
+
+  "name": "Illia Test Mod",
+  "description": "...",
+  "authors": [
+    "Illia Zhdanov"
+  ],
+  "contact": {
+    "homepage": "https://fabricmc.net/",
+    "sources": "https://github.com/FabricMC/fabric-example-mod"
+  },
+
+  "license": "MIT",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "net.illia.illiatestmod.IlliaTestMod"
+		],
+	  "client": [
+		  "net.illia.illiatestmod.IlliaTestModClient"
+	  ]
+  },
+  "mixins": [
+	  "illiatestmod.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.14.6",
+    "fabric": "*",
+    "minecraft": "~1.19",
+    "java": ">=17"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+}
