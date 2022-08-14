@@ -12,7 +12,7 @@ public class IlliaTestModClient implements ClientModInitializer {
 	public void onInitializeClient() {
 		System.out.println("The Client Has Loaded, This Is The IlliaTestModClient Class");
 		IlliaTestMod.LOGGER.debug("Hello You LOGGER Idiot");
-		FluidRenderHandlerRegistry.INSTANCE.register(IlliaTestMod.STILL_MELTED_RUBY, IlliaTestMod.FLOWING_MELTED_RUBY, new SimpleFluidRenderHandler(new Identifier("illiatestmod:fluid/melted_ruby"), new Identifier("minecraft:block/flowing_melted_ruby")));
+		FluidRenderHandlerRegistry.INSTANCE.register(IlliaTestMod.STILL_MELTED_RUBY, IlliaTestMod.FLOWING_MELTED_RUBY, new SimpleFluidRenderHandler(new Identifier("illiatestmod:block/melted_ruby"), new Identifier("illiatestmod:block/flowing_melted_ruby")));
 		BlockRenderLayerMap.INSTANCE.putFluids(RenderLayer.getTranslucent(), IlliaTestMod.STILL_MELTED_RUBY, IlliaTestMod.FLOWING_MELTED_RUBY);
 	}
 }
