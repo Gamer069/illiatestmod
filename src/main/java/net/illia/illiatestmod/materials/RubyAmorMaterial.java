@@ -1,6 +1,6 @@
 package net.illia.illiatestmod.materials;
 
-import net.illia.illiatestmod.items.ModItems;
+import net.illia.illiatestmod.item.ModItems;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.ArmorMaterial;
 import net.minecraft.recipe.Ingredient;

@@ -3,7 +3,7 @@ package net.illia.illiatestmod.block;
 import net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityTypeBuilder;
 import net.illia.illiatestmod.IlliaTestMod;
 import net.illia.illiatestmod.block.custom.DiamondChestEntity;
-import net.illia.illiatestmod.items.ModItemGroups;
+import net.illia.illiatestmod.item.ModItemGroups;
 import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;

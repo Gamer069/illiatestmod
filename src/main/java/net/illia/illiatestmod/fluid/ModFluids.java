@@ -2,7 +2,7 @@ package net.illia.illiatestmod.fluid;
 
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.illia.illiatestmod.IlliaTestMod;
-import net.illia.illiatestmod.items.ModItemGroups;
+import net.illia.illiatestmod.item.ModItemGroups;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.FluidBlock;

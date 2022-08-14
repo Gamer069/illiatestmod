@@ -6,8 +6,8 @@ import net.illia.illiatestmod.block.ModBlockEntities;
 import net.illia.illiatestmod.block.ModBlocks;
 import net.illia.illiatestmod.entity.ModEntities;
 import net.illia.illiatestmod.fluid.ModFluids;
-import net.illia.illiatestmod.items.ModItemGroups;
-import net.illia.illiatestmod.items.ModItems;
+import net.illia.illiatestmod.item.ModItemGroups;
+import net.illia.illiatestmod.item.ModItems;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

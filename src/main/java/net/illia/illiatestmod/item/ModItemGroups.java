@@ -1,4 +1,4 @@
-package net.illia.illiatestmod.items;
+package net.illia.illiatestmod.item;
 
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.illia.illiatestmod.IlliaTestMod;
