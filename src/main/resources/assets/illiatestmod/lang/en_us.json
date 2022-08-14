@@ -6,6 +6,11 @@
 	"item.illiatestmod.ruby_chestplate": "Ruby Chestplate",
 	"item.illiatestmod.ruby_leggings": "Ruby Leggings",
 	"item.illiatestmod.ruby_boots": "Ruby Boots",
+	"item.illiatestmod.ruby_pickaxe": "Ruby Pickaxe",
+	"item.illiatestmod.ruby_axe": "Ruby Axe",
+	"item.illiatestmod.ruby_shovel": "Ruby Pickaxe",
+	"item.illiatestmod.ruby_hoe": "Ruby Hoe",
+	"item.illiatestmod.ruby_sword": "Ruby Sword",
 
 	"block.illiatestmod.diamond_chest": "Diamond Chest",
 	"itemGroup.illiatestmod.illiatestmod": "Illia Test Mod",

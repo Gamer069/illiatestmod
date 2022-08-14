@@ -2,12 +2,13 @@ package net.illia.illiatestmod.item.custom;
 
 import net.illia.illiatestmod.item.ModItemGroups;
 import net.illia.illiatestmod.item.ModItems;
+import net.minecraft.block.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.recipe.Ingredient;
 
 public class RubyMaterialItem extends Item implements ToolMaterial {
-	public static final RubyMaterialItem INSTANCE = new RubyMaterialItem(new Settings().group(ModItemGroups.ILLIA_TEST_MOD));
+	public static final RubyMaterialItem INSTANCE = new RubyMaterialItem(new Item.Settings().group(ModItemGroups.ILLIA_TEST_MOD));
 
 	public RubyMaterialItem(Settings settings) {
 		super(settings);
