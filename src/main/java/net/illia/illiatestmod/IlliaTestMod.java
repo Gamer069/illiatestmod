@@ -29,7 +29,5 @@ public class IlliaTestMod implements ModInitializer {
 		ModEntities.register();
 
 		ModArmorMaterials.register();
-
-		LOGGER.info("HELLO, YOU STUPID LOG READER");
 	}
 }

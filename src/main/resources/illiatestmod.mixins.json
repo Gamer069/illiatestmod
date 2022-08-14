@@ -8,7 +8,7 @@
   "client": [
 	  "IlliaTestModMixin"
   ],
-  "injectors": {
+	"injectors": {
     "defaultRequire": 1
   }
 }
