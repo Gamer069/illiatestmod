@@ -1,6 +1,7 @@
 package net.illia.illiatestmod.block.custom;
 
 import net.illia.illiatestmod.IlliaTestMod;
+import net.illia.illiatestmod.block.ModBlockEntities;
 import net.minecraft.block.BlockEntityProvider;
 import net.minecraft.block.BlockRenderType;
 import net.minecraft.block.BlockState;
@@ -36,7 +37,7 @@ public class DiamondChest extends BlockWithEntity implements BlockEntityProvider
 	@Nullable
 	@Override
 	public <T extends BlockEntity> BlockEntityTicker<T> getTicker(World world, BlockState state, BlockEntityType<T> type) {
-		return checkType(type, IlliaTestMod.DIAMOND_CHEST_ENTITY, (world1, pos1, state1, be) -> DiamondChestEntity.tick(world1, pos1, state1, be));
+		return checkType(type, ModBlockEntities.DIAMOND_CHEST_ENTITY, (world1, pos1, state1, be) -> DiamondChestEntity.tick(world1, pos1, state1, be));
 	}
 
 	@Override

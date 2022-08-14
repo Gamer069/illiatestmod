@@ -1,15 +1,11 @@
 package net.illia.illiatestmod.fluid;
 
-import net.illia.illiatestmod.IlliaTestMod;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
-import net.minecraft.block.Blocks;
-import net.minecraft.block.FluidBlock;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.fluid.FlowableFluid;
 import net.minecraft.fluid.Fluid;
 import net.minecraft.fluid.FluidState;
-import net.minecraft.fluid.WaterFluid;
 import net.minecraft.item.Item;
 import net.minecraft.particle.ParticleEffect;
 import net.minecraft.particle.ParticleTypes;
@@ -81,21 +77,21 @@ public abstract class MeltedRubyFluid extends FlowableFluid {
 
 	@Override
 	public Fluid getStill() {
-		return IlliaTestMod.STILL_MELTED_RUBY;
+		return ModFluids.STILL_MELTED_RUBY;
 	}
 
 	@Override
 	public Fluid getFlowing() {
-		return IlliaTestMod.FLOWING_MELTED_RUBY;
+		return ModFluids.FLOWING_MELTED_RUBY;
 	}
 
 	@Override
 	public Item getBucketItem() {
-		return IlliaTestMod.MELTED_RUBY_BUCKET;
+		return ModFluids.MELTED_RUBY_BUCKET;
 	}
 	@Override
 	protected BlockState toBlockState(FluidState state) {
-		return IlliaTestMod.MELTED_RUBY_FLUID_BLOCK.getDefaultState().with(Properties.LEVEL_15, getBlockStateLevel(state));
+		return ModFluids.MELTED_RUBY_FLUID_BLOCK.getDefaultState().with(Properties.LEVEL_15, getBlockStateLevel(state));
 	}
 	public static class Flowing extends MeltedRubyFluid {
 		@Override

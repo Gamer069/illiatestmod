@@ -2,6 +2,11 @@
 	"item.illiatestmod.ruby": "Ruby",
 	"item.illiatestmod.melted_ruby_bucket": "Melted Ruby Bucket",
 	"item.illiatestmod.illia_cube_spawn_egg": "Illia Cube Spawn Egg",
+	"item.illiatestmod.ruby_helmet": "Ruby Helmet",
+	"item.illiatestmod.ruby_chestplate": "Ruby Chestplate",
+	"item.illiatestmod.ruby_leggings": "Ruby Leggings",
+	"item.illiatestmod.ruby_boots": "Ruby Boots",
+
 	"block.illiatestmod.diamond_chest": "Diamond Chest",
 	"itemGroup.illiatestmod.illiatestmod": "Illia Test Mod",
 	"block.illiatestmod.melted_ruby": "Melted Ruby",
