@@ -1,5 +1,8 @@
 {
 	"item.illiatestmod.ruby": "Ruby",
+	"item.illiatestmod.melted_ruby_bucket": "Melted Ruby Bucket",
 	"block.illiatestmod.diamond_chest": "Diamond Chest",
-	"itemGroup.illiatestmod.illiatestmod": "Illia Test Mod"
+	"itemGroup.illiatestmod.illiatestmod": "Illia Test Mod",
+	"block.illiatestmod.melted_ruby": "Melted Ruby",
+	"block.illiatestmod.flowing_melted_ruby": "Flowing Melted Ruby"
 }
