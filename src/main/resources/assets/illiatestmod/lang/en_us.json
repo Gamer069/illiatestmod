@@ -4,5 +4,6 @@
 	"block.illiatestmod.diamond_chest": "Diamond Chest",
 	"itemGroup.illiatestmod.illiatestmod": "Illia Test Mod",
 	"block.illiatestmod.melted_ruby": "Melted Ruby",
-	"block.illiatestmod.flowing_melted_ruby": "Flowing Melted Ruby"
+	"block.illiatestmod.flowing_melted_ruby": "Flowing Melted Ruby",
+	"entity.illiatestmod.illia_cube": "Illia Cube"
 }
