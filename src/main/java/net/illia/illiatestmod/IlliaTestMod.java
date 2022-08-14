@@ -23,15 +23,13 @@ import net.minecraft.fluid.FlowableFluid;
 import net.minecraft.item.*;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
-import net.minecraft.world.gen.feature.Feature;
-import net.minecraft.world.gen.feature.LakeFeature;
-import net.minecraft.world.gen.feature.SingleStateFeatureConfig;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class IlliaTestMod implements ModInitializer {
 	public static final String MOD_ID = "illiatestmod";
 	public static final Logger LOGGER = LoggerFactory.getLogger(IlliaTestMod.MOD_ID);
+	public static final Item ILLIA_CUBE_SPAWN_EGG = new SpawnEggItem(IlliaTestMod.ILLIA_CUBE, 12895428, 11382189, new Item.Settings().group(IlliaTestMod.ILLIA_TEST_MOD));
 	public static final DiamondChest DIAMOND_CHEST = new DiamondChest(FabricBlockSettings.of(Material.METAL).hardness(3.0f));
 	public static final ItemGroup ILLIA_TEST_MOD = FabricItemGroupBuilder.build(new Identifier(IlliaTestMod.MOD_ID, "illiatestmod"), () -> new ItemStack(Items.BARRIER));
 	public static final Item RUBY = new Item(new FabricItemSettings().group(IlliaTestMod.ILLIA_TEST_MOD));
@@ -48,6 +46,7 @@ public class IlliaTestMod implements ModInitializer {
 		FLOWING_MELTED_RUBY = Registry.register(Registry.FLUID, new Identifier(IlliaTestMod.MOD_ID, "flowing_melted_ruby"), new MeltedRubyFluid.Flowing());
 		MELTED_RUBY_FLUID_BLOCK = Registry.register(Registry.BLOCK, new Identifier(IlliaTestMod.MOD_ID, "melted_ruby_fluid_block"), new FluidBlock(IlliaTestMod.STILL_MELTED_RUBY, FabricBlockSettings.copyOf(Blocks.WATER)){ });
 		MELTED_RUBY_BUCKET = Registry.register(Registry.ITEM, new Identifier(IlliaTestMod.MOD_ID, "melted_ruby_bucket"), new BucketItem(STILL_MELTED_RUBY, new Item.Settings().recipeRemainder(Items.BUCKET).maxCount(1).group(IlliaTestMod.ILLIA_TEST_MOD)));
+		Registry.register(Registry.ITEM, new Identifier(IlliaTestMod.MOD_ID, "illia_cube_spawn_egg"), IlliaTestMod.ILLIA_CUBE_SPAWN_EGG);
 		Registry.register(Registry.BLOCK, new Identifier(IlliaTestMod.MOD_ID, "diamond_chest"), IlliaTestMod.DIAMOND_CHEST);
 		Registry.register(Registry.ITEM, new Identifier(IlliaTestMod.MOD_ID, "diamond_chest"), new BlockItem(IlliaTestMod.DIAMOND_CHEST, new Item.Settings().group(IlliaTestMod.ILLIA_TEST_MOD)));
 		Registry.register(Registry.ITEM, new Identifier(IlliaTestMod.MOD_ID, "ruby"), RUBY);
