@@ -16,5 +16,8 @@
 	"itemGroup.illiatestmod.illiatestmod": "Illia Test Mod",
 	"block.illiatestmod.melted_ruby": "Melted Ruby",
 	"block.illiatestmod.flowing_melted_ruby": "Flowing Melted Ruby",
-	"entity.illiatestmod.illia_cube": "Illia Cube"
+
+	"entity.illiatestmod.illia_cube": "Illia Cube",
+
+	"enchantment.illiatestmod.op": "OP"
 }

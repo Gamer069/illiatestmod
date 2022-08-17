@@ -4,7 +4,7 @@
 	"version": "${version}",
 
 	"name": "Illia Test Mod",
-	"description": "...",
+	"description": "This is an example description! Tell everyone what your mod is about!",
 	"authors": [
 		"Illia Zhdanov"
 	],
@@ -14,6 +14,7 @@
 	},
 
 	"license": "MIT License",
+	"icon": "assets/modid/icon.png",
 
 	"environment": "*",
 	"entrypoints": {
