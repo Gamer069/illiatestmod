@@ -80,7 +80,7 @@ public interface ImplementedInventory extends Inventory {
 
     int[] getAvailableSlots(Direction side);
 
-	boolean canInsert(int slot, ItemStack stack, @Nullable Direction dir);
+	boolean canInsert(int slot, ItemStack stack, Direction dir);
 
 	boolean canExtract(int slot, ItemStack stack, Direction dir);
 }
