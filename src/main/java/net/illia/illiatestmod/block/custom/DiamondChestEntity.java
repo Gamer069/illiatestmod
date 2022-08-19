@@ -1,21 +1,27 @@
 package net.illia.illiatestmod.block.custom;
 
-import net.illia.illiatestmod.IlliaTestMod;
+import net.illia.illiatestmod.DiamondChestScreenHandler;
 import net.illia.illiatestmod.ImplementedInventory;
 import net.illia.illiatestmod.block.ModBlockEntities;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
+import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.Inventories;
-import net.minecraft.inventory.SidedInventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NbtCompound;
+import net.minecraft.screen.NamedScreenHandlerFactory;
+import net.minecraft.screen.ScreenHandler;
+import net.minecraft.screen.ShulkerBoxScreenHandler;
+import net.minecraft.text.Text;
+import net.minecraft.text.TranslatableTextContent;
 import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
-public class DiamondChestEntity extends BlockEntity implements ImplementedInventory, SidedInventory {
+public class DiamondChestEntity extends BlockEntity implements NamedScreenHandlerFactory, ImplementedInventory {
 	private int number = 7;
 	private final DefaultedList<ItemStack> items = DefaultedList.ofSize(2, ItemStack.EMPTY);
 	public DiamondChestEntity(BlockPos pos, BlockState state) {
@@ -30,8 +36,9 @@ public class DiamondChestEntity extends BlockEntity implements ImplementedInvent
 	}
 	@Override
 	protected void writeNbt(NbtCompound nbt) {
-		nbt.putInt("number", number);
 		super.writeNbt(nbt);
+		Inventories.writeNbt(nbt, this.items);
+		nbt.putInt("number", number);
 	}
 	public static void tick(World world, BlockPos pos, BlockState state, DiamondChestEntity be) {
 
@@ -59,5 +66,15 @@ public class DiamondChestEntity extends BlockEntity implements ImplementedInvent
 	@Override
 	public boolean canExtract(int slot, ItemStack stack, Direction dir) {
 		return true;
+	}
+
+	@Override
+	public ScreenHandler createMenu(int syncId, PlayerInventory inv, PlayerEntity player) {
+		return new DiamondChestScreenHandler(syncId, inv, this);
+	}
+
+	@Override
+	public Text getDisplayName() {
+		return Text.translatable(getCachedState().getBlock().getTranslationKey());
 	}
 }

@@ -5,8 +5,11 @@ import net.minecraft.inventory.Inventories;
 import net.minecraft.inventory.Inventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.collection.DefaultedList;
+import net.minecraft.util.math.Direction;
+import org.jetbrains.annotations.Nullable;
 
 public interface ImplementedInventory extends Inventory {
+
 	DefaultedList<ItemStack> getItems();
 
 	static ImplementedInventory of(DefaultedList<ItemStack> items) {
@@ -74,4 +77,10 @@ public interface ImplementedInventory extends Inventory {
 	default boolean canPlayerUse(PlayerEntity player) {
 		return true;
 	}
+
+    int[] getAvailableSlots(Direction side);
+
+	boolean canInsert(int slot, ItemStack stack, @Nullable Direction dir);
+
+	boolean canExtract(int slot, ItemStack stack, Direction dir);
 }

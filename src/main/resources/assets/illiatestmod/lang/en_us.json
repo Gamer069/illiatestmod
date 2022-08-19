@@ -6,10 +6,21 @@
 	"item.illiatestmod.ruby_chestplate": "Ruby Chestplate",
 	"item.illiatestmod.ruby_leggings": "Ruby Leggings",
 	"item.illiatestmod.ruby_boots": "Ruby Boots",
+	"item.illiatestmod.ruby_pickaxe": "Ruby Pickaxe",
+	"item.illiatestmod.ruby_axe": "Ruby Axe",
+	"item.illiatestmod.ruby_shovel": "Ruby Pickaxe",
+	"item.illiatestmod.ruby_hoe": "Ruby Hoe",
+	"item.illiatestmod.ruby_sword": "Ruby Sword",
 
 	"block.illiatestmod.diamond_chest": "Diamond Chest",
 	"itemGroup.illiatestmod.illiatestmod": "Illia Test Mod",
 	"block.illiatestmod.melted_ruby": "Melted Ruby",
 	"block.illiatestmod.flowing_melted_ruby": "Flowing Melted Ruby",
-	"entity.illiatestmod.illia_cube": "Illia Cube"
+	"entity.illiatestmod.illia_cube": "Illia Cube",
+
+	"enchantment.illiatestmod.testenchantment": "Test Enchantment",
+
+	"effect.illiatestmod.test_effect": "Test Effect",
+
+	"gamerule.test_gamerule": "Test Gamerule"
 }

@@ -11,8 +11,11 @@ import net.minecraft.block.entity.BlockEntityTicker;
 import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.inventory.Inventory;
+import net.minecraft.screen.NamedScreenHandlerFactory;
+import net.minecraft.screen.ScreenHandler;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
+import net.minecraft.util.ItemScatterer;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
@@ -42,6 +45,12 @@ public class DiamondChest extends BlockWithEntity implements BlockEntityProvider
 
 	@Override
 	public ActionResult onUse(BlockState state, World world, BlockPos blockPos, PlayerEntity player, Hand hand, BlockHitResult hit) {
+		if (!world.isClient) {
+			NamedScreenHandlerFactory factory = state.createScreenHandlerFactory(world, blockPos);
+			if (factory != null) {
+				player.openHandledScreen(factory);
+			}
+		}
 		if (world.isClient()) return ActionResult.SUCCESS;
 		Inventory blockEntity = (Inventory) world.getBlockEntity(blockPos);
 		if (!player.getStackInHand(hand).isEmpty()) {
@@ -64,5 +73,26 @@ public class DiamondChest extends BlockWithEntity implements BlockEntityProvider
 			}
 		}
 		return ActionResult.SUCCESS;
+	}
+
+	@Override
+	public void onStateReplaced(BlockState state, World world, BlockPos pos, BlockState newState, boolean moved) {
+		if (state.getBlock() != newState.getBlock()) {
+			BlockEntity blockEntity = world.getBlockEntity(pos);
+			if (blockEntity instanceof DiamondChestEntity) {
+				ItemScatterer.spawn(world, pos, (DiamondChestEntity)blockEntity);
+				world.updateComparators(pos, this);
+			}
+		}
+	}
+
+	@Override
+	public boolean hasComparatorOutput(BlockState state) {
+		return true;
+	}
+
+	@Override
+	public int getComparatorOutput(BlockState state, World world, BlockPos pos) {
+		return ScreenHandler.calculateComparatorOutput(world.getBlockEntity(pos));
 	}
 }
