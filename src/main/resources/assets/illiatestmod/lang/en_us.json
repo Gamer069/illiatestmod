@@ -17,7 +17,15 @@
 	"block.illiatestmod.melted_ruby": "Melted Ruby",
 	"block.illiatestmod.flowing_melted_ruby": "Flowing Melted Ruby",
 
+	"item.minecraft.potion.effect.test_potion": "Test Potion",
+
+	"item.minecraft.splash_potion.effect.test_potion": "Splash Test Potion",
+
+	"item.minecraft.lingering_potion.effect.test_potion": "Lingering Test Potion",
+
 	"entity.illiatestmod.illia_cube": "Illia Cube",
 
-	"enchantment.illiatestmod.op": "OP"
+	"enchantment.illiatestmod.op": "OP",
+
+	"effect.illiatestmod.test_effect": "Test Effect"
 }

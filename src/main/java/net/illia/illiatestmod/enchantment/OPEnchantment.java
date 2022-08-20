@@ -7,6 +7,7 @@ import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.text.Text;
 import java.util.Map;
@@ -27,7 +28,7 @@ public class OPEnchantment extends Enchantment {
 		return 5;
 	}
 
-	public OPEnchantment() {
+	public OPEnchantment(Item.Settings group) {
 		super(Rarity.RARE, EnchantmentTarget.WEAPON, new EquipmentSlot[] {EquipmentSlot.MAINHAND});
 	}
 	@Override

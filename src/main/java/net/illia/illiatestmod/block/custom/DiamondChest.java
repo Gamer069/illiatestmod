@@ -1,6 +1,5 @@
 package net.illia.illiatestmod.block.custom;
 
-import net.illia.illiatestmod.IlliaTestMod;
 import net.illia.illiatestmod.block.ModBlockEntities;
 import net.minecraft.block.BlockEntityProvider;
 import net.minecraft.block.BlockRenderType;
