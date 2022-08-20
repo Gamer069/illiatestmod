@@ -168,7 +168,7 @@ public class IlliaCubeEntity extends PathAwareEntity {
 			this.tryAttack(getTarget().getAttacker());
 		}
 		List<LivingEntity> list = this.world.getTargets(LivingEntity.class, HEAD_TARGET_PREDICATE, this, this.getBoundingBox().expand(20.0, 8.0, 20.0));
-		if (list.isEmpty()) {
+		if (!list.isEmpty()) {
 			LivingEntity livingEntity2 = list.get(this.random.nextInt(list.size()));
 			this.setTrackedEntityId(i, livingEntity2.getId());
 			if (this.getTarget() != null) {
@@ -176,8 +176,8 @@ public class IlliaCubeEntity extends PathAwareEntity {
 			} else {
 				this.setTrackedEntityId(0, 0);
 			}
-			this.bossBar.setPercent(this.getHealth() / this.getMaxHealth());
 		}
+		this.bossBar.setPercent(this.getHealth() / this.getMaxHealth());
 	}
 	@Override
 	public void onSpawnPacket(EntitySpawnS2CPacket packet) {
