@@ -1,11 +1,15 @@
 package net.illia.illiatestmod;
 
+import jdk.jfr.Description;
+import jdk.jfr.Name;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.inventory.Inventories;
 import net.minecraft.inventory.Inventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.collection.DefaultedList;
 
+@Name("Implemented Inventory")
+@Description("ImplementedInventory = Implemented Inventory")
 public interface ImplementedInventory extends Inventory {
 	DefaultedList<ItemStack> getItems();
 
@@ -67,7 +71,7 @@ public interface ImplementedInventory extends Inventory {
 
 	@Override
 	default void markDirty() {
-		// Override if you want behavior.
+		//Behavior Is Needed :(
 	}
 
 	@Override

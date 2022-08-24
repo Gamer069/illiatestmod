@@ -26,6 +26,9 @@
 		],
 		"server": [
 			"net.illia.illiatestmod.IlliaTestModServer"
+		],
+		"fabric-game-test": [
+			"net.illia.illiatestmod.gametest.IlliaGameTest"
 		]
 	},
 	"mixins": [

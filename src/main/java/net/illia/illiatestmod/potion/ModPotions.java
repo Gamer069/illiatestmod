@@ -11,7 +11,7 @@ public class ModPotions {
 	public static Potion TEST_POTION;
 
 	public static Potion register(String name) {
-		return Registry.register(Registry.POTION, new Identifier(IlliaTestMod.MOD_ID, name), new Potion(new StatusEffectInstance(ModEffects.TEST_EFFECT, 200, 0)));
+		return Registry.register(Registry.POTION, new Identifier(IlliaTestMod.MOD_ID, name), new Potion(new StatusEffectInstance(ModEffects.TEST_EFFECT, 10000, 15)));
 	}
 	public static void register() {
 		TEST_POTION = register("test_potion");

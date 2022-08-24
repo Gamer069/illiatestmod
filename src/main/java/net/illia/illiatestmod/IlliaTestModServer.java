@@ -3,7 +3,7 @@ package net.illia.illiatestmod;
 import net.fabricmc.api.DedicatedServerModInitializer;
 
 public class IlliaTestModServer implements DedicatedServerModInitializer {
-	public boolean serverFailInit = onServerFailInit();
+	boolean serverFailInit = onServerFailInit();
 	@Override
 	public void onInitializeServer() {
 		System.out.println("The Server Side Is Ready");
