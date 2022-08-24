@@ -117,7 +117,7 @@ public class IlliaCubeEntity extends PathAwareEntity {
 		if (vec3d.horizontalLengthSquared() > 0.05) {
 			this.setYaw((float) MathHelper.atan2(vec3d.z, vec3d.x) * 57.295776f- 90.0f);
 		}
-		super.tickMovement();
+
 		for (i = 0; i < 2; ++i) {
 			this.prevSideHeadYaws[i] = this.sideHeadYaws[i];
 			this.prevSideHeadPitches[i] = this.sideHeadPitches[i];
@@ -153,6 +153,7 @@ public class IlliaCubeEntity extends PathAwareEntity {
 			if (!bl || this.world.random.nextInt(4) != 0) continue;
 			this.world.addParticle(ParticleTypes.ENTITY_EFFECT, p + this.random.nextGaussian() * (double)0.3f, q + this.random.nextGaussian() * (double)0.3f, r + this.random.nextGaussian() * (double)0.3f, 0.7f, 0.7f, 0.5);
 		}
+		super.tickMovement();
 	}
 
 	@Override
@@ -165,13 +166,14 @@ public class IlliaCubeEntity extends PathAwareEntity {
 			if (livingEntity == null || !this.canTarget(livingEntity) || this.squaredDistanceTo(livingEntity) > 900.0 || !this.canSee(livingEntity)) {
 				this.setTrackedEntityId(i, 0);
 			}
-			this.tryAttack(getTarget().getAttacker());
+			// THIS IS WHERE I TOOK ```this.tryAttack(getTarget().getAttacker());``` in line 175
 		}
 		List<LivingEntity> list = this.world.getTargets(LivingEntity.class, HEAD_TARGET_PREDICATE, this, this.getBoundingBox().expand(20.0, 8.0, 20.0));
 		if (!list.isEmpty()) {
 			LivingEntity livingEntity2 = list.get(this.random.nextInt(list.size()));
 			this.setTrackedEntityId(i, livingEntity2.getId());
 			if (this.getTarget() != null) {
+				this.tryAttack(getTarget().getAttacker());
 				this.setTrackedEntityId(0, this.getTarget().getId());
 			} else {
 				this.setTrackedEntityId(0, 0);

@@ -4,6 +4,7 @@ import net.fabricmc.api.ModInitializer;
 import net.illia.illiatestmod.armor.materials.ModArmorMaterials;
 import net.illia.illiatestmod.block.ModBlockEntities;
 import net.illia.illiatestmod.block.ModBlocks;
+import net.illia.illiatestmod.command.ModCommands;
 import net.illia.illiatestmod.effect.ModEffects;
 import net.illia.illiatestmod.enchantment.ModEnchantments;
 import net.illia.illiatestmod.entity.ModEntities;
@@ -38,5 +39,7 @@ public class IlliaTestMod implements ModInitializer {
 		ModEffects.register();
 
 		ModPotions.register();
+
+		ModCommands.register();
 	}
 }
