@@ -2,7 +2,6 @@ package net.illia.illiatestmod;
 
 import net.fabricmc.api.ModInitializer;
 import net.illia.illiatestmod.armor.materials.ModArmorMaterials;
-import net.illia.illiatestmod.block.ModBlockEntities;
 import net.illia.illiatestmod.block.ModBlocks;
 import net.illia.illiatestmod.command.ModCommands;
 import net.illia.illiatestmod.effect.ModEffects;
@@ -25,8 +24,6 @@ public class IlliaTestMod implements ModInitializer {
 		ModFluids.register();
 
 		ModBlocks.register();
-
-		ModBlockEntities.register();
 
 		ModItemGroups.register();
 
