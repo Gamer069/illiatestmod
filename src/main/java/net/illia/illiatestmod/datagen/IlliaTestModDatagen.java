@@ -40,9 +40,9 @@ public class IlliaTestModDatagen implements DataGeneratorEntrypoint {
 		}
 		@Override
 		protected void generateRecipes(Consumer<RecipeJsonProvider> exporter) {
-			  ShapedRecipeJsonBuilder.create(ModItems.FREEZE_BOW, 1).input('#', Ingredient.ofItems(Items.BOW)).input('L', Ingredient.ofItems(Items.ICE)).pattern("LLL").pattern("L#L").pattern("LLL");
-			  ShapelessRecipeJsonBuilder.create(ModItems.RUBY, 1).input(Ingredient.ofItems(ModBlocks.RUBY_BLOCK));
-			  ShapedRecipeJsonBuilder.create(ModBlocks.RUBY_BLOCK, 1).input('#', Ingredient.ofItems(ModItems.RUBY)).pattern("###").pattern("###").pattern("###");
+			  ShapedRecipeJsonBuilder.create(ModItems.FREEZE_BOW, 1).input('#', Ingredient.ofItems(Items.BOW)).input('L', Ingredient.ofItems(Items.ICE)).pattern("LLL").pattern("L#L").pattern("LLL").offerTo(exporter);
+			  ShapelessRecipeJsonBuilder.create(ModItems.RUBY, 1).input(Ingredient.ofItems(ModBlocks.RUBY_BLOCK)).offerTo(exporter);
+			  ShapedRecipeJsonBuilder.create(ModBlocks.RUBY_BLOCK, 1).input('#', Ingredient.ofItems(ModItems.RUBY)).pattern("###").pattern("###").pattern("###").offerTo(exporter);
 		}
 	}
 	@Override
@@ -50,5 +50,4 @@ public class IlliaTestModDatagen implements DataGeneratorEntrypoint {
 		fabricDataGenerator.addProvider(IlliaTestModTagGenerator::new);
 		fabricDataGenerator.addProvider(IlliaTestModRecipeGen::new);
 	}
-
 }
