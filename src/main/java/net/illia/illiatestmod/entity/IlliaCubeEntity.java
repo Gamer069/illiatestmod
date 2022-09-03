@@ -2,6 +2,7 @@ package net.illia.illiatestmod.entity;
 
 import com.google.common.collect.ImmutableList;
 import net.minecraft.block.BlockState;
+import net.minecraft.client.render.entity.feature.SkinOverlayOwner;
 import net.minecraft.entity.*;
 import net.minecraft.entity.ai.TargetPredicate;
 import net.minecraft.entity.ai.control.MoveControl;
@@ -19,7 +20,6 @@ import net.minecraft.entity.data.TrackedData;
 import net.minecraft.entity.data.TrackedDataHandlerRegistry;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.mob.HostileEntity;
-import net.minecraft.entity.mob.PathAwareEntity;
 import net.minecraft.item.Items;
 import net.minecraft.network.packet.s2c.play.EntitySpawnS2CPacket;
 import net.minecraft.particle.ParticleTypes;
@@ -37,7 +37,7 @@ import java.util.EnumSet;
 import java.util.List;
 import java.util.function.Predicate;
 
-public class IlliaCubeEntity extends PathAwareEntity {
+public class IlliaCubeEntity extends HostileEntity implements SkinOverlayOwner {
 	private static final TrackedData<Integer> TRACKED_ENTITY_ID_1 = DataTracker.registerData(IlliaCubeEntity.class, TrackedDataHandlerRegistry.INTEGER);
 	private static final TrackedData<Integer> TRACKED_ENTITY_ID_2 = DataTracker.registerData(IlliaCubeEntity.class, TrackedDataHandlerRegistry.INTEGER);
 	private static final TrackedData<Integer> TRACKED_ENTITY_ID_3 = DataTracker.registerData(IlliaCubeEntity.class, TrackedDataHandlerRegistry.INTEGER);
@@ -183,6 +183,10 @@ public class IlliaCubeEntity extends PathAwareEntity {
 	}
 	@Override
 	public void onSpawnPacket(EntitySpawnS2CPacket packet) {
+		this.bossBar.setPercent(0.0f);
+		this.setHealth(this.getMaxHealth() / 3.0f);
+	}
+	public void onSummoned() {
 		this.bossBar.setPercent(0.0f);
 		this.setHealth(this.getMaxHealth() / 3.0f);
 	}

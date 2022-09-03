@@ -5,6 +5,7 @@ import net.illia.illiatestmod.IlliaTestModClient;
 import net.minecraft.client.render.entity.EntityRendererFactory;
 import net.minecraft.client.render.entity.MobEntityRenderer;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.math.BlockPos;
 
 public class IlliaCubeEntityRenderer extends MobEntityRenderer<IlliaCubeEntity, IlliaCubeEntityModel> {
 	public IlliaCubeEntityRenderer(EntityRendererFactory.Context context) {
@@ -13,5 +14,9 @@ public class IlliaCubeEntityRenderer extends MobEntityRenderer<IlliaCubeEntity, 
 	@Override
 	public Identifier getTexture(IlliaCubeEntity entity) {
 		return new Identifier(IlliaTestMod.MOD_ID, "textures/entity/cube/illia_cube.png");
+	}
+	@Override
+	protected int getBlockLight(IlliaCubeEntity entity, BlockPos pos) {
+		return 15;
 	}
 }

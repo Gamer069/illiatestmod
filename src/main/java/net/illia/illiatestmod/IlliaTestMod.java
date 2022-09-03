@@ -10,6 +10,7 @@ import net.illia.illiatestmod.entity.ModEntities;
 import net.illia.illiatestmod.fluid.ModFluids;
 import net.illia.illiatestmod.item.ModItemGroups;
 import net.illia.illiatestmod.item.ModItems;
+import net.illia.illiatestmod.particle.ModParticles;
 import net.illia.illiatestmod.potion.ModPotions;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -38,5 +39,7 @@ public class IlliaTestMod implements ModInitializer {
 		ModPotions.register();
 
 		ModCommands.register();
+
+		ModParticles.register();
 	}
 }

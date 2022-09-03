@@ -19,7 +19,7 @@ import java.util.function.Predicate;
 import static net.minecraft.item.Items.SPECTRAL_ARROW;
 
 public class FreezeBow extends RangedWeaponItem implements Vanishable {
-	public static final int RANGE = 16;
+	public static final int RANGE = 20;
 	public FreezeBow(Settings settings) {
 		super(settings);
 	}
@@ -71,7 +71,7 @@ public class FreezeBow extends RangedWeaponItem implements Vanishable {
 				projectile.setPunch(k);
 			}
 			if (EnchantmentHelper.getLevel(Enchantments.FLAME, stack) > 0) {
-				player.setOnFireFor(100);
+				player.setOnFireFor(120);
 			}
 			stack.damage(1, player, p -> p.sendToolBreakStatus(player.getActiveHand()));
 			if (bl2 || player.getAbilities().creativeMode && (itemStack.isOf(SPECTRAL_ARROW) || itemStack.isOf(Items.TIPPED_ARROW))) {
@@ -100,7 +100,6 @@ public class FreezeBow extends RangedWeaponItem implements Vanishable {
 	public int getMaxUseTime(ItemStack stack) {
 		return 7200000;
 	}
-
 	@Override
 	public UseAction getUseAction(ItemStack stack) {
 		return UseAction.BOW;

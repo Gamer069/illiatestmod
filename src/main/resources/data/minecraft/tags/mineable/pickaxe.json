@@ -1,6 +1,7 @@
 {
 	"replace": false,
 	"values": [
-		"illiatestmod:diamond_chest"
+		"illiatestmod:diamond_chest",
+		"illiatestmod:ruby_block"
 	]
 }
