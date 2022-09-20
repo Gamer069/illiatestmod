@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "minecraft:bow"
+    },
+    "L": {
+      "item": "minecraft:ice"
+    }
+  },
+  "pattern": [
+    "LLL",
+    "L#L",
+    "LLL"
+  ],
+  "result": {
+    "item": "illiatestmod:freeze_bow"
+  }
+}

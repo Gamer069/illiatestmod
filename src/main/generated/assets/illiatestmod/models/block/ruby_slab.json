@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "illiatestmod:block/ruby_slab"
+  }
+}
