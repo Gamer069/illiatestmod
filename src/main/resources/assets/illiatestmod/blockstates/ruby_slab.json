@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "illiatestmod:block/ruby_slab"
+    },
+	 "type=double": {
+		 "model": "illiatestmod:block/ruby_block"
+	 },
+	  "type=top": {
+		  "model": "illiatestmod:block/ruby_slab_top"
+	  }
+  }
+}

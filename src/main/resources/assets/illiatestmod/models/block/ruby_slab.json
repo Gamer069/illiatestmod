@@ -1,0 +1,8 @@
+{
+	"parent": "minecraft:block/slab",
+	"textures": {
+		"bottom": "illiatestmod:ruby_block",
+		"top": "illiatestmod:ruby_block",
+		"side": "illiatestmod:ruby_block"
+	}
+}

@@ -1,8 +1,0 @@
-{
-	"parent": "minecraft:block/cube_bottom_top",
-	"textures": {
-		"bottom": "illiatestmod:block/test_tnt_bottom",
-		"side": "illiatestmod:block/test_tnt_side",
-		"top": "illiatestmod:block/test_tnt_top"
-	}
-}
